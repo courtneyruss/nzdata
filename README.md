@@ -15,6 +15,7 @@ You can install the development version of nzdata from
 
 ``` r
 # install.packages("devtools")
+add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
 devtools::install_github("courtneyruss/nzdata")
 ```
 
