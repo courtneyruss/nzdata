@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# nzdata
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+nzdata is an API wrapper for data.govt.nz.
+
+## Installation
+
+You can install the development version of nzdata from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("courtneyruss/nzdata")
+```
+
+## Example
+
+This example requests data from the data source ["A-Z listing of all Whanganui streets"](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
+
+```{r example}
+library(nzdata)
+streets <- load_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
+streets
+```
+
+
