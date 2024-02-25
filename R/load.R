@@ -13,7 +13,6 @@ load_data <- function(resource_id) {
   if (response$status_code == 200) {
     content <- httr::content(response, "text")
     parsed <- jsonlite::fromJSON(content)
-    parsed
   } else {
     stop("Error: Failed to fetch data. Status code: ", response$status_code)
   }
