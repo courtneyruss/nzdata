@@ -4,7 +4,8 @@
 # nzdata
 
 <!-- badges: start -->
-<!-- badges: end -->
+
+\#’ <!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz.
 
