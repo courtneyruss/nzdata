@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # nzdata
 
 <!-- badges: start -->
-add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz
