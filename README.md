@@ -26,23 +26,7 @@ streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resourc
 ``` r
 library(nzdata)
 streets <- load_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
-streets$result
-#> $include_total
-#> [1] TRUE
-#> 
-#> $limit
-#> [1] 32000
-#> 
-#> $records_format
-#> [1] "objects"
-#> 
-#> $resource_id
-#> [1] "2f4e30a7-091f-4aed-b18f-4b21cc19e6b4"
-#> 
-#> $total_estimation_threshold
-#> NULL
-#> 
-#> $records
+streets$result$records
 #>     _id                   Abbot St
 #> 1     1                   Acton Pl
 #> 2     2            Addenbrooke Tce
@@ -776,47 +760,4 @@ streets$result
 #> 730 730                  Duncan St
 #> 731 731                    Pukeroa
 #> 732 732                  Kowhai St
-#> 
-#> $fields
-#>         id type
-#> 1      _id  int
-#> 2 Abbot St text
-#> 
-#> $`_links`
-#> $`_links`$start
-#> [1] "/api/3/action/datastore_search?resource_id=2f4e30a7-091f-4aed-b18f-4b21cc19e6b4&limit=32000"
-#> 
-#> $`_links`$`next`
-#> [1] "/api/3/action/datastore_search?resource_id=2f4e30a7-091f-4aed-b18f-4b21cc19e6b4&limit=32000&offset=32000"
-#> 
-#> 
-#> $total
-#> [1] 732
-#> 
-#> $total_was_estimated
-#> [1] FALSE
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
