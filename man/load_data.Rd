@@ -15,3 +15,7 @@ large list
 \description{
 Load data
 }
+\examples{
+streets <- '2f4e30a7-091f-4aed-b18f-4b21cc19e6b4'
+load_data(streets)
+}
