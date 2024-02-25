@@ -4,6 +4,8 @@
 # nzdata
 
 <!-- badges: start -->
+
+add_lifecycle_badge(lifecycle = “experimental”, quiet = FALSE)
 <!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz
@@ -15,7 +17,6 @@ You can install the development version of nzdata from
 
 ``` r
 # install.packages("devtools")
-add_lifecycle_badge(lifecycle = "experimental", quiet = FALSE)
 devtools::install_github("courtneyruss/nzdata")
 ```
 
