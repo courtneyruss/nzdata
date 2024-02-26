@@ -44,6 +44,7 @@ To find the resource ID, navigate to the resource page on cataloge.data.govt.nz.
 
 ```{r example}
 library(nzdata)
-get_nz_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
+streets <- get_nz_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
+head(streets, 10)
 
 ```
