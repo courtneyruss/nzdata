@@ -1,3 +1,3 @@
 # nzdata (development version)
 
-* Minimum viable product release
+* Minimum viable product
