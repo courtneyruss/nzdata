@@ -1,3 +1,6 @@
+#' Get Data
+#'
+#' @export
 get_nz_data <- function(resource_id) {
   url <- paste0("https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=", resource_id, "&limit=1000")
 
