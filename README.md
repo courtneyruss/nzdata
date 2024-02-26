@@ -40,7 +40,4 @@ backslash: ![URL Path](images/path.png)
 
 ``` r
 library(nzdata)
-streets <- load_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
-head(streets$result$records, 10)
-#> NULL
 ```
