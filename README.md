@@ -23,8 +23,11 @@ devtools::install_github("courtneyruss/nzdata")
 
 ## Caveats
 
-This package will only work with resources that are ‘machine readable’.
-These are marked with this icon: ![Data API Image](images/data_api.png)
+1.  nzdata is still in development
+
+2.  This package will only work with resources that are ‘machine
+    readable’. These are marked with this icon: ![Data API
+    Image](images/data_api.png)
 
 ## Example
 
