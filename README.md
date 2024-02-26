@@ -23,13 +23,20 @@ devtools::install_github("courtneyruss/nzdata")
 
 ## Caveats
 
-This package will only work with resources that are ‘machine readable’.
-These are marked with this icon: ![Data API Image](images/data_api.png)
+1.  nzdata is still in development
+
+2.  This package will only work with resources that are ‘machine
+    readable’. These are marked with this icon: ![Data
+    API](images/data_api.png)
 
 ## Example
 
 This example requests data from dataset [“A-Z listing of all Whanganui
 streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
+
+To find the resource ID, navigate to the resource page on
+cataloge.data.govt.nz. The resource ID is the string after the last
+backslash: ![URL Path](images/path.png)
 
 ``` r
 library(nzdata)
