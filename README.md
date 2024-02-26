@@ -35,7 +35,7 @@ This example requests data from dataset [“A-Z listing of all Whanganui
 streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
 
 To find the resource ID, navigate to the resource page on
-cataloge.data.govt.nz. The resource ID is the string after the last
+catalogue.data.govt.nz. The resource ID is the string after the last
 backslash: ![URL Path](images/path.png)
 
 ``` r
