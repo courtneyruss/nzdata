@@ -29,10 +29,8 @@ You can install the development version of nzdata from [GitHub](https://github.c
 # install.packages("devtools")
 devtools::install_github("courtneyruss/nzdata")
 ```
-## Caveats
-1. nzdata is still in development
-
-2. This package will only work with resources that are 'machine readable'. These are marked with this icon: 
+## Caveat
+This package will only work with resources that are 'machine readable'. These are marked with this icon: 
 ![Data API](images/data_api.png)
 
 ## Example
