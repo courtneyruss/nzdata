@@ -1,7 +1,7 @@
-#' Get Metadata
+#' Get Dataset Metadata
 #'
 #' @export
-get_nz_metadata <- function(dataset_id) {
+nz_dataset_metadata <- function(dataset_id) {
   # Fetch data from the provided URL
   url <- paste0("https://catalogue.data.govt.nz/api/action/package_show?id=", dataset_id)
   response <- httr::GET(url)
