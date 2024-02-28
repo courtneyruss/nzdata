@@ -2,10 +2,19 @@
 % Please edit documentation in R/get_data.R
 \name{get_nz_data}
 \alias{get_nz_data}
-\title{Get Data}
+\title{Get Dataset}
 \usage{
 get_nz_data(resource_id)
 }
+\arguments{
+\item{resource_id}{A string}
+}
+\value{
+A dataframe
+}
 \description{
-Get Data
+'get_nz_data()' returns a dataframe from the resource identified in resource_id.
+}
+\examples{
+get_nz_data('4b292323-9fcc-41f8-814b-3c7b19cf14b3')
 }

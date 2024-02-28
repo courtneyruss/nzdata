@@ -6,6 +6,15 @@
 \usage{
 nz_dataset_metadata(dataset_id)
 }
+\arguments{
+\item{dataset_id}{A string}
+}
+\value{
+A dataframe
+}
 \description{
-Get Dataset Metadata
+'nz_dataset_metadata()' returns the metadata for the dataset identified by 'dataset_id'
+}
+\examples{
+nz_dataset_metadata('directory-of-educational-institutions')
 }

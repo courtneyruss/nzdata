@@ -1,5 +1,10 @@
-#' Get Data
+#' Get Dataset
 #'
+#' 'get_nz_data()' returns a dataframe from the resource identified in resource_id.
+#' @param resource_id A string
+#' @returns A dataframe
+#' @examples
+#' get_nz_data('4b292323-9fcc-41f8-814b-3c7b19cf14b3')
 #' @export
 get_nz_data <- function(resource_id) {
   url <- paste0("https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=", resource_id, "&limit=1000")
