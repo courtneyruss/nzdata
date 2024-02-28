@@ -7,6 +7,8 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz
@@ -63,5 +65,5 @@ schools$frequency_of_update
 
 schools$metadata_modified
 #> $metadata_modified
-#> [1] "2024-02-27T20:34:29.764812"
+#> [1] "2024-02-28T19:30:17.798664"
 ```
