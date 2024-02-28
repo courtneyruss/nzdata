@@ -9,8 +9,8 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-\[![Build
-Version](https://img.shields.io/github/v/release/courtneyruss/nzdata)\
+[![Release
+Version: 0.1.0](https://img.shields.io/github/v/release/courtneyruss/nzdata)](https://github.com/courtneyruss/nzdata/releases/tag/0.1.0)
 <!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz
