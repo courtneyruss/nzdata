@@ -33,12 +33,7 @@ streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resourc
 
 To find the resource ID, navigate to the resource page on
 catalogue.data.govt.nz. The resource ID is the string after the last
-backslash:
-
-<figure>
-<img src="images/path.png" alt="URL Path" />
-<figcaption aria-hidden="true">URL Path</figcaption>
-</figure>
+backslash: ![Data API](images/path.png)
 
 ``` r
 library(nzdata)
