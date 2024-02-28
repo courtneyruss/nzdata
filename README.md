@@ -61,9 +61,11 @@ schools <- nz_dataset_metadata('directory-of-educational-institutions')
 schools$author
 #> $author
 #> [1] "Ministry of Education"
+
 schools$frequency_of_update
 #> $frequency_of_update
 #> [1] "Continuously updated"
+
 schools$metadata_modified
 #> $metadata_modified
 #> [1] "2024-02-27T20:34:29.764812"

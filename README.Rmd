@@ -49,7 +49,9 @@ head(streets, 10)
 schools <- nz_dataset_metadata('directory-of-educational-institutions')
 
 schools$author
+
 schools$frequency_of_update
+
 schools$metadata_modified
 
 ```
