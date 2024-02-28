@@ -9,10 +9,7 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-\[![Build
-Version](https://img.shields.io/github/v/release/courtneyruss/nzdata)
-<!-- badges: end --> [![Release Version:
-0.1.0](https://img.shields.io/github/v/release/courtneyruss/nzdata)](https://github.com/courtneyruss/nzdata/releases/tag/0.1.0)<!-- badges: end -->
+<!-- badges: end -->
 
 nzdata is an API wrapper for data.govt.nz
 
@@ -33,7 +30,9 @@ These are marked with this icon: ![Data API](images/data_api.png)
 
 ## Useage
 
-This example requests data from dataset [“A-Z listing of all Whanganui
+### Get Resource
+
+b This example requests data from [“A-Z listing of all Whanganui
 streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
 
 To find the resource ID, navigate to the resource page on
@@ -55,7 +54,11 @@ head(streets, 10)
 #> 8    8        Akepiro Pl
 #> 9    9          Alexa Pl
 #> 10  10      Alexander St
+```
 
+### Get Dataset Metadata
+
+``` r
 schools <- nz_dataset_metadata('directory-of-educational-institutions')
 
 schools$author

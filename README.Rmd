@@ -18,10 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Version](https://img.shields.io/github/v/release/courtneyruss/nzdata)
 <!-- badges: end -->
-[![Release
-Version: 0.1.0](https://img.shields.io/github/v/release/courtneyruss/nzdata)](https://github.com/courtneyruss/nzdata/releases/tag/0.1.0)<!-- badges: end -->
+
 
 nzdata is an API wrapper for data.govt.nz
 
@@ -38,8 +36,9 @@ get_nz_data() will only work with resources that are 'machine readable'. These a
 ![Data API](images/data_api.png)
 
 ## Useage
-
-This example requests data from dataset ["A-Z listing of all Whanganui streets"](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
+### Get Resource
+b
+This example requests data from ["A-Z listing of all Whanganui streets"](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
 
 To find the resource ID, navigate to the resource page on catalogue.data.govt.nz. The resource ID is the string after the last backslash:
 ![Data API](images/path.png)
@@ -48,7 +47,11 @@ To find the resource ID, navigate to the resource page on catalogue.data.govt.nz
 library(nzdata)
 streets <- get_nz_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
 head(streets, 10)
+```
 
+### Get Dataset Metadata
+
+```{r example 2}
 schools <- nz_dataset_metadata('directory-of-educational-institutions')
 
 schools$author
