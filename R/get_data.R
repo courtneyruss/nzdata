@@ -7,6 +7,12 @@
 #' get_nz_data('4b292323-9fcc-41f8-814b-3c7b19cf14b3')
 #' @export
 get_nz_data <- function(resource_id) {
+  # Check if data.govt.nz is up
+  check_response <- httr::GET("https://data.govt.nz/")
+  if (httr::status_code(check_response) != 200) {
+    stop("Error: Failed to connect to data.govt.nz. Status code: ", httr::status_code(check_response))
+  }
+
   url <- paste0("https://catalogue.data.govt.nz/api/3/action/datastore_search?resource_id=", resource_id, "&limit=1000")
 
   response <- httr::GET(url)
@@ -44,6 +50,13 @@ get_nz_data <- function(resource_id) {
     }
     return(combined_records)
   } else {
-    stop("Error: Failed to fetch data. Status code: ", response$status_code)
+    # Check response code from nz_dataset_metadata
+    dataset_metadata_url <- paste0("https://catalogue.data.govt.nz/api/action/package_show?id=", resource_id)
+    dataset_metadata_response <- httr::GET(dataset_metadata_url)
+    if (dataset_metadata_response$status_code == 200) {
+      stop("That's a dataset id. Run ?nz_dataset_metadata() for information.")
+    } else {
+      stop("Error: Failed to fetch data. Status code: ", response$status_code)
+  }
   }
 }

@@ -16,3 +16,9 @@ test_that("error is returned for invalid dataset id", {
 
 #> Test passed
 
+test_that("error is returned for a resource id", {
+expect_error(nz_dataset_metadata('4b292323-9fcc-41f8-814b-3c7b19cf14b3'), "resource")
+})
+
+#> Test passed
+

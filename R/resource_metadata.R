@@ -1,12 +1,12 @@
-#' Get Dataset Metadata
+#' Get Resource Metadata
 #'
-#' 'nz_dataset_metadata()' returns the metadata for the dataset identified by 'dataset_id'
-#' @param dataset_id A string
-#' @return A dataframe
+#' 'nz_resource_metadata()' returns the metadata for the dataset identified by 'resource_id'
+#' @param resource_id A string
+#' @returns A dataframe
 #' @examples
-#' nz_dataset_metadata('directory-of-educational-institutions')
+#' nz_resource_metadata('4b292323-9fcc-41f8-814b-3c7b19cf14b3')
 #' @export
-nz_dataset_metadata <- function(dataset_id) {
+nz_resource_metadata <- function(resource_id) {
   # Check if data.govt.nz is up
   check_response <- httr::GET("https://data.govt.nz/")
   if (httr::status_code(check_response) != 200) {
@@ -14,7 +14,7 @@ nz_dataset_metadata <- function(dataset_id) {
   }
 
   # Fetch data from the provided URL
-  url <- paste0("https://catalogue.data.govt.nz/api/action/package_show?id=", dataset_id)
+  url <- paste0("https://catalogue.data.govt.nz/api/action/resource_show?id=", resource_id)
   response <- httr::GET(url)
 
   # Check if the status code is 200 (OK)
@@ -34,13 +34,14 @@ nz_dataset_metadata <- function(dataset_id) {
     # Return the resulting dataframe
     return(result_df)
   } else {
-    # Fetch metadata for dataset
-    resource_metadata_url <- paste0("https://catalogue.data.govt.nz/api/action/resource_show?id=", dataset_id)
-    resource_metadata_response <- httr::GET(resource_metadata_url)
-    if (httr::status_code(resource_metadata_response) == 200) {
-      stop("That's a resource id. Run ?nz_resource_metadata() for information about getting metadata for a resource.")
+    # Check if the resource_id corresponds to a dataset
+    dataset_metadata_url <- paste0("https://catalogue.data.govt.nz/api/action/package_show?id=", resource_id)
+    dataset_metadata_response <- httr::GET(dataset_metadata_url)
+
+    if (httr::status_code(dataset_metadata_response) == 200) {
+      stop("Error: That's a dataset id. Run ?nz_dataset_metadata() for information.")
     } else {
-      stop("Error: Failed to fetch data. Status code: ", httr::status_code(resource_metadata_response))
+      stop("Error: Failed to fetch data. Status code: ", httr::status_code(response))
     }
   }
 }
