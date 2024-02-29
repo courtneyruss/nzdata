@@ -1,6 +1,6 @@
 Package: nzdata
 Title: API Wrapper for data.govt.nz
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Courtney", "Russ", , "courtney@courtneyruss.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0009-1278-2808"))
