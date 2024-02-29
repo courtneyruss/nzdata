@@ -32,7 +32,7 @@ These are marked with this icon: ![Data API](images/data_api.png)
 
 ### Get Resource
 
-b This example requests data from [“A-Z listing of all Whanganui
+These examples request data from [“A-Z listing of all Whanganui
 streets”](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
 
 To find the resource ID, navigate to the resource page on
@@ -56,9 +56,32 @@ head(streets, 10)
 #> 10  10      Alexander St
 ```
 
-### Get Dataset Metadata
+### Get Resource Metadata
 
 ``` r
+library(nzdata)
+streets <- nz_resource_metadata('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
+
+streets$created
+#> $created
+#> [1] "2017-03-15T16:18:52.672330"
+
+streets$format
+#> $format
+#> [1] "CSV"
+
+streets$name
+#> $name
+#> [1] "WDC streets"
+```
+
+### Get Dataset Metadata
+
+this example requests data from [Directory of educational
+institutions]('https://catalogue.data.govt.nz/dataset/directory-of-educational-institutions')
+
+``` r
+library(nzdata)
 schools <- nz_dataset_metadata('directory-of-educational-institutions')
 
 schools$author
@@ -71,5 +94,5 @@ schools$frequency_of_update
 
 schools$metadata_modified
 #> $metadata_modified
-#> [1] "2024-02-28T19:30:17.798664"
+#> [1] "2024-02-29T19:30:17.703637"
 ```

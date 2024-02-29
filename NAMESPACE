@@ -2,4 +2,5 @@
 
 export(get_nz_data)
 export(nz_dataset_metadata)
+export(nz_resource_metadata)
 importFrom(lifecycle,deprecated)

@@ -37,8 +37,8 @@ get_nz_data() will only work with resources that are 'machine readable'. These a
 
 ## Useage
 ### Get Resource
-b
-This example requests data from ["A-Z listing of all Whanganui streets"](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
+
+These examples request data from ["A-Z listing of all Whanganui streets"](https://catalogue.data.govt.nz/dataset/whanganui-streets-a-z/resource/2f4e30a7-091f-4aed-b18f-4b21cc19e6b4)
 
 To find the resource ID, navigate to the resource page on catalogue.data.govt.nz. The resource ID is the string after the last backslash:
 ![Data API](images/path.png)
@@ -49,9 +49,25 @@ streets <- get_nz_data('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
 head(streets, 10)
 ```
 
-### Get Dataset Metadata
+### Get Resource Metadata
 
 ```{r example 2}
+library(nzdata)
+streets <- nz_resource_metadata('2f4e30a7-091f-4aed-b18f-4b21cc19e6b4')
+
+streets$created
+
+streets$format
+
+streets$name
+
+```
+
+### Get Dataset Metadata
+this example requests data from [Directory of educational institutions]('https://catalogue.data.govt.nz/dataset/directory-of-educational-institutions')
+
+```{r example 3}
+library(nzdata)
 schools <- nz_dataset_metadata('directory-of-educational-institutions')
 
 schools$author
@@ -61,3 +77,5 @@ schools$frequency_of_update
 schools$metadata_modified
 
 ```
+
+
